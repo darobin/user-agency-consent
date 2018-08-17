@@ -9,7 +9,7 @@
     <meta name="twitter:creator" content="@robinberjon">
     <meta name="twitter:title" property="og:title" content="User Agency, Not User Consent">
     <meta name="twitter:description" property="og:description" content="My position statement for the W3C Workshop on Permissions and User Consent">
-    <meta name="twitter:image" property="og:image" content="XXX">
+    <meta name="twitter:image" property="og:image" content="https://darobin.github.io/user-agency-consent/google-forced-consent.png">
     <meta name="twitter:url" property="og:url" content="https://darobin.github.io/user-agency-consent/">
     <meta property="og:site_name" content="Robin Berjon">
     <meta property="og:type" content="blog">
@@ -25,9 +25,11 @@
         margin: 0 auto;
         max-width: 21cm;
         font-family: Franklin, Arial, sans-serif;
+        line-height: 1.4;
       }
       header {
         margin-bottom: 3em;
+        line-height: initial;
       }
       h1 {
         font-family: Cheltenham, Georgia, serif;
@@ -67,6 +69,9 @@
         margin-bottom: 10px;
         border: 2px solid #656061;
       }
+      li {
+        margin: 1em 0;
+      }
     </style>
   </head>
   <body>
@@ -89,29 +94,96 @@
       <figure>
         <img src="activex.jpeg" width="341" height="134" alt="ActiveX security prompt">
         <img src="google-forced-consent.png" width="636" height="456" alt="Google privacy prompt">
-        <figcaption>Progress over the past twenty years</figcaption>
+        <figcaption>Twenty years of progress in putting users first on the Web</figcaption>
       </figure>
+      <p>
+        Relying on consent to the processing of personal data suffers from numerous issues, amongst
+        which:
+      </p>
+      <ul>
+        <li>
+          It leads to consent fatigue such that users — even when educated to the
+          underlying issues — will eventually give up and simply accept.
+        </li>
+        <li>
+          It strongly incentivises dark UX patterns from the party expect to garner consent. This
+          has led to a race to define increasingly precise guidelines as to what constitutes fair
+          and informed consent (the WP29
+          “<a href="http://ec.europa.eu/newsroom/article29/item-detail.cfm?item_id=623051">Guidelines
+          On Consent</a>” run to 31 pages with dozens of footnotes referring to other sources for
+          further detail). The likelihood that regulators can beat thousands of designers working
+          to defeat user protections in this race is low.
+        </li>
+        <li>
+          It is grounded in a simplistic vision of personal data processing. In today’s Web economy,
+          even a relatively simple service will be tied up in a know of personal data processing
+          that is by far too complex to convey to a user within a single dialog (no matter how often
+          WP29 calls for creativity in this domain), and users do not have the time (or desire) to
+          make such decisions several times a day.
+        </li>
+        <li>
+          It puts the onus of enforcement and decision on the user, representing an abdication of
+          responsibility from service providers and user agents. If the option for individual
+          controls over privacy is desirable, the broad application of consent is inherently a
+          surrender of privacy by design and by default.
+        </li>
+        <li>
+          While the literature describes cases in which after-the-fact consent is meaningful, and in
+          some less-invasive cases implied consent is acceptable, overall consent tends to imply
+          modal interfaces. These, in turn, inherently lead to fatigue and automatic bypassing. It
+          could be argued that consent is structurally problematic.
+        </li>
+        <li>
+          Overally, when consent is relied upon excessively it becomes toxic for privacy both at the
+          individual and collective levels.
+        </li>
+      </ul>
+      <p>
+        This is not to say that consent should never be used when processing personal data, there
+        are situations in which it is the best option — when it is rare enough to catch the user’s
+        attention, typically when sensitive personal data or potentially harmful processing are
+        involved.
+      </p>
+      <p>
+        Ideally, the processing of personal data should involve:
+      </p>
+      <!-- make this not a list, just a few short items -->
+      <ul>
+        <li>
+          <strong>Agency</strong>: personal data sharing should only happen as a result of direct
+          user action. There should be room for responsible interpretation, for instance if a user
+          instructs their browser to visit a site then they need not approve every last piece of
+          personal data that the browser provides that site with (but sharing with third parties is
+          evidently not part of the user’s instruction and needs a legal basis of its own for the
+          browser to act under).
+        </li>
+        <li>
+          <strong>Responsibility</strong>: the data controller should
+        </li>
+        <li>
+          <strong>Asynchrony</strong>:
+        </li>
+        <li>
+          <strong>Auditability</strong>:
+        </li>
+      </ul>
     </main>
     <!--
       XXX
-      - style
+      - requirements
+        - agency: user action
+        - fiduciary: responsibility to decide the right processing must fall to the controller
+        - asynchronous: no modality, can review later
+        - automatically auditable: it should be possible to get a
       - agency > consent (for security, but also for privacy)
       - third-party cookies issue as a case (and mention GDPR violation as an open question, but
         with list of articles violatied)
       ## Outline
-      * List WP29 guidelines, a race to increase criteria for consent that cannot be won. dark
-        patterns will prevail.
-      * Too much complexity
-      * Too much fatigue
-      * Everyone has to be an enforcer, which is too time-consuming and does not work
-      * Toxic for individual privacy
-      * Toxic for privacy overall
-      * The importance of non-modality
       * Machine-readable provenance
         * What is the MVP?
         * How easily can we deploy simple systems that detail provenance?
         * How can they be turned into effective reports?
-      * Unlikely security, privacy can lend itself more to asynchronous processing
+      * Unlike security, privacy can lend itself more to asynchronous processing
         * With rights of erasure, privacy can (assuming no bad actors, which aren't the primary
           threat) be recuperated after the fact.
         * Strong declarative provenance can be audited
@@ -120,7 +192,7 @@
       * Transparency in personal data processing can be key and regulatorily enforced. People only
         need to care once in a while, and a small number of caring people can lead to enforcement
         for all. This is a vastly superior to the individualistic model behind consent.
-      * This leads to a reënforcement of legitimate interest as a basis, given stronger transparency
+      * This leads to a reinforcement of legitimate interest as a basis, given stronger transparency
       * Where to add:
         * The 3P cookie issue as a violation (try to mention it in there somewhere)
     -->
