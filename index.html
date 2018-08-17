@@ -4,15 +4,125 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>User Agency, Not User Consent</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@robinberjon">
+    <meta name="twitter:creator" content="@robinberjon">
+    <meta name="twitter:title" property="og:title" content="User Agency, Not User Consent">
+    <meta name="twitter:description" property="og:description" content="My position statement for the W3C Workshop on Permissions and User Consent">
+    <meta name="twitter:image" property="og:image" content="XXX">
+    <meta name="twitter:url" property="og:url" content="https://darobin.github.io/user-agency-consent/">
+    <meta property="og:site_name" content="Robin Berjon">
+    <meta property="og:type" content="blog">
+    <meta property="og:locale" content="en_UK">
+    <meta name="theme-color" content="#000">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      main {
+        margin: 0 auto;
+        max-width: 21cm;
+        font-family: Franklin, Arial, sans-serif;
+      }
+      header {
+        margin-bottom: 3em;
+      }
+      h1 {
+        font-family: Cheltenham, Georgia, serif;
+        font-weight: normal;
+        font-size: 3em;
+        margin: 3em 0 0 0;
+      }
+      p.meta {
+        text-align: right;
+      }
+      a {
+        color: #2fa6fe;
+        text-decoration: none;
+        background: linear-gradient(0deg, #fff100 0%, #fff100 10%, transparent 11%);
+      }
+      a:hover {
+        background: linear-gradient(0deg, #fff100 0%, #fff100 10%, transparent 31%);
+      }
+      img {
+        max-width: 100%;
+      }
+      figure {
+        text-align: center;
+        background: #d3e1e6;
+        padding: 10px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      figcaption {
+        text-align: left;
+        background: #fff;
+        margin: 0 -8px -8px -8px;
+        padding: 10px;
+        font-style: italic;
+      }
+      figure > img {
+        margin-bottom: 10px;
+        border: 2px solid #656061;
+      }
+    </style>
   </head>
   <body>
-    <h1>User Agency, Not User Consent</h1>
+    <main>
+      <header>
+        <h1>User Agency, Not User Consent</h1>
+        <p class="meta">
+          Robin Berjon,
+          <a href="mailto:robin.berjon@nytimes.com">robin.berjon@nytimes.com</a>,
+          <a href="https://berjon.com/">https://berjon.com/</a>,
+          <a href="https://twitter.com/robinberjon">@robinberjon</a>.
+        </p>
+      </header>
+      <p>
+        Consent is increasingly seen as the primary basis upon which to process personal data, in
+        much the same way that it was long considered to be an acceptable foundation atop which a
+        security model could grant an application access to elevated privileges. It was by and large
+        a dreadful approach to security, it is hardly any better for privacy.
+      </p>
+      <figure>
+        <img src="activex.jpeg" width="341" height="134" alt="ActiveX security prompt">
+        <img src="google-forced-consent.png" width="636" height="456" alt="Google privacy prompt">
+        <figcaption>Progress over the past twenty years</figcaption>
+      </figure>
+    </main>
     <!--
       XXX
-      - include the social sharing headers so that this can be shared effectively
+      - style
       - agency > consent (for security, but also for privacy)
       - third-party cookies issue as a case (and mention GDPR violation as an open question, but
         with list of articles violatied)
+      ## Outline
+      * List WP29 guidelines, a race to increase criteria for consent that cannot be won. dark
+        patterns will prevail.
+      * Too much complexity
+      * Too much fatigue
+      * Everyone has to be an enforcer, which is too time-consuming and does not work
+      * Toxic for individual privacy
+      * Toxic for privacy overall
+      * The importance of non-modality
+      * Machine-readable provenance
+        * What is the MVP?
+        * How easily can we deploy simple systems that detail provenance?
+        * How can they be turned into effective reports?
+      * Unlikely security, privacy can lend itself more to asynchronous processing
+        * With rights of erasure, privacy can (assuming no bad actors, which aren't the primary
+          threat) be recuperated after the fact.
+        * Strong declarative provenance can be audited
+        * There can be user-level audits: what is the transitive tree of data sharing for a given
+          system you interact with?
+      * Transparency in personal data processing can be key and regulatorily enforced. People only
+        need to care once in a while, and a small number of caring people can lead to enforcement
+        for all. This is a vastly superior to the individualistic model behind consent.
+      * This leads to a reënforcement of legitimate interest as a basis, given stronger transparency
+      * Where to add:
+        * The 3P cookie issue as a violation (try to mention it in there somewhere)
     -->
   </body>
 </html>
